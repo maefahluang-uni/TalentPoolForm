@@ -25,7 +25,7 @@ const ForgotPassword: React.FC = () => {
                             <div className="border-t border-gray-900 flex-grow ml-3"></div>
                         </div>
                         <div className="flex justify-center">
-                            <p>Back to
+                            <p>Back t
                                 <a href="/login" className="text-blue-500 underline ml-2">Login</a>
                             </p>
                         </div>

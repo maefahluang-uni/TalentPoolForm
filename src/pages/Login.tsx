@@ -2,8 +2,12 @@
 import React from "react";
 // import './App.css';
 import PasswordInput from "./PasswordInput";
+import { navigate } from "wouter/use-browser-location";
 
 const Login: React.FC = () => {
+    const goToHomePage = () => {
+        navigate('/');
+    }
 
     return (
         // <div className="min-h-screen bg-gray-100">
@@ -28,7 +32,7 @@ const Login: React.FC = () => {
                         <a href="/forgotPassword" className="flex justify-end text-sm text-blue-500 underline mt-2">Forgot your password?</a>
                         {/* <p onClick={handleClick} className="text-right text-sm text-blue-500 underline mt-2" >Forgot your password?</p> */}
                         <div className="mt-4 flex justify-center">
-                            <button type="submit" className="bg-blue-500 text-white py-1 px-4 rounded" >Login</button>
+                            <button type="submit" className="bg-blue-500 text-white py-1 px-4 rounded" onClick={goToHomePage}>Login</button>
                         </div>
                     </form>
                     <div className="flex items-center my-4 mx-6">

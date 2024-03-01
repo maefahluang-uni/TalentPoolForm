@@ -2,8 +2,13 @@
 import React from "react";
 import PasswordInput from "./PasswordInput";
 import ConfirmPassword from "./ConfirmPassword";
+import { navigate } from "wouter/use-browser-location";
 
 const SignUp: React.FC = () => {
+    const goToHomePage = () => {
+        navigate('/');
+    }
+
     return (
         <div className="min-h-screen">
             <header className="bg-white py-6">
@@ -30,7 +35,7 @@ const SignUp: React.FC = () => {
                             <ConfirmPassword />
                         </div>
                         <div className="mt-4 flex justify-center">
-                            <button type="submit" className="bg-blue-500 text-white py-1 px-4 rounded" >Sign Up</button>
+                            <button type="submit" className="bg-blue-500 text-white py-1 px-4 rounded" onClick={goToHomePage}>Sign Up</button>
                         </div>
                     </form>
                     <div className="flex items-center my-4 mx-6">
